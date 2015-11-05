@@ -17,13 +17,14 @@ static String username;
 static int userguess;
 static Random ro = new Random();
 static boolean playagain;
-
+static int triesleft;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         playagain = true;
         magicnumber =ro.nextInt(100);
+        triesleft=5;
         // TODO code application logic here
         
          Scanner number = new Scanner(System.in);
@@ -56,6 +57,17 @@ static boolean playagain;
                     }
                     if(magicnumber > userguess){
                         System.out.println("too low");
+                    }
+                    else if(magicnumber < userguess){
+                        triesleft=triesleft-1;
+                        System.out.println("too high. You now have" + triesleft+ "triesleft.");
+                        playagain=true;
+                    }
+                    else if(magicnumber > userguess){
+                        triesleft=triesleft-1;
+                        System.out.println("too low.You now have" + triesleft+"triesleft");;
+                        playagain=true;
+                        
                     }
                 }
             }
