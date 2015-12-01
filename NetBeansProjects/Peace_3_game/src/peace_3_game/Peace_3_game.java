@@ -35,7 +35,8 @@ static boolean isrunning;
              System.out.println("a zombie bursts through the door and corners her");
              System.out.println("Run? 3:run 4:stay and try to fight him off");
              useractions=userinput.nextInt();
-                if(useractions==3){                    
+                if(useractions==3){                    //Karen is home alone and hears a noise. Fight or flight.
+                   
                  Run();
              }else{
                     if(useractions==4)
@@ -48,6 +49,7 @@ static boolean isrunning;
              
              
          }else{
+             //The second choice you can make staying quiet
              if(useractions ==2){
                 stayquiet();
                  useractions=userinput.nextInt();
@@ -69,7 +71,7 @@ static boolean isrunning;
          
     
 }
-    private static void Run(){
+    private static void Run(){//run to get help
         System.out.println("She runs and escapes through the  door");
         System.out.println("Karen decides to go to one of her neighbor's houses.");
         System.out.println("Lights are on at the Morses' and screaming is coming from the Green's.");
@@ -86,6 +88,7 @@ static boolean isrunning;
                  }else{
              none();
          }
+         //Running away from zombie
     }
     private static void grabbat(){
         System.out.println("She grabs the bat and beats up the zombie and runs out the house");
@@ -109,7 +112,7 @@ static boolean isrunning;
          if(useractions==1){
              Run();
          }else{
-           thanksforplaying();
+           thanksforplaying();//YOU DIED
          }
             
              
@@ -118,11 +121,11 @@ static boolean isrunning;
                  System.out.println("She see a baseball bat on the ground.");
                  System.out.println("Grab the bat? 1: don't grab bat 2: grab bat");
     if(useractions==1){
-        dontgrabbat();
+        dontgrabbat();//GRAB WEAPON to defend yourself
     }    
                  
 }
-    private static void dontgrabbat(){
+    private static void dontgrabbat(){//grab baseball bat to defend yourself
          System.out.println("She doesn't grab the bat and quietly hides behind the bookcase");
          System.out.println("A zombie walks into the room and yanks her out from the bookcase");
          System.out.println("The zombie is trying to bite her neck");
@@ -138,7 +141,7 @@ static boolean isrunning;
          
    
             }
-    private static void punchzombie(){
+    private static void punchzombie(){//punch zombie to attempt to get him off you
         System.out.println("She punches the zombie but he grabs her arm.");
         System.out.println("The zombie starts to eat her arm");
         System.out.println("GAME OVER!!!");
@@ -152,7 +155,7 @@ static boolean isrunning;
              thanksforplaying();
          }
     }
-    private static void kickzombie(){
+    private static void kickzombie(){//kick the zombie to get him off you
         System.out.println("Karen kicks the zombie in the shin and manages to push him away.");
         System.out.println("The zombie is on his feet again and is limping towards her.");
         System.out.println("She runs out the backdoor.");
@@ -180,7 +183,7 @@ static boolean isrunning;
              takecar();
          }else{
              leavecar();
-             
+             //drive to town or walk
          }
     }
     private static void morsehouse(){
@@ -193,13 +196,13 @@ static boolean isrunning;
     Scanner userinput = new Scanner(System.in);
          useractions=userinput.nextInt();
          if(useractions==1){
-             smashwindow();
+             smashwindow();//smash the window to distract them or not.
          }
     
 }
     private static void none(){
         System.out.println("she chooses neither house and starts to walk to town.");
-        
+        //Skip llot and go straight to town
     }
     private static void smashwindow(){
         System.out.println("She picks up the brick and smashes the trucks window and takes off running.");
@@ -241,6 +244,7 @@ static boolean isrunning;
          }else{
              donttagalong();
          }
+         //Accept alice as a traveling companion or not.
     }
     private static void leavethem(){
         System.out.println("She leaves the two zombies and tries to sneak around them.");
@@ -250,9 +254,9 @@ static boolean isrunning;
          Scanner userinput = new Scanner(System.in);
          useractions=userinput.nextInt();
          if(useractions==1){
-             smashwindow();
+             smashwindow();//start choice over again
          }else{
-             thanksforplaying();
+             thanksforplaying();//you quit
          }
     }
     static private void thanksforplaying(){
@@ -273,7 +277,7 @@ static boolean isrunning;
          }else{
              walktotownwitalice();
          }
-             
+           //Walking with your new friend to Town  
              
         
     }
@@ -283,7 +287,7 @@ static boolean isrunning;
     static private void leavecar(){
         System.out.println("Karen decides that the car will draw too much attention and starts to jog to the nearest town.");
     }
-    static private void donttagalong(){
+    static private void donttagalong(){//what happens if you dont allow alice to come with you
         System.out.println("Karen decides that Alice is too much trouble and leaves without her.");
         System.out.println("Walk to the nearest town or drive?");
         System.out.println("1:find car 2:walk");
@@ -292,16 +296,17 @@ static boolean isrunning;
          if(useractions==1){
              greenhouse();
          }
+         
     walktotown();
 }
     static private void walktotown(){
       System.out.println("Karen decides that cars will draw too much attention and starts to walk to town.");  
     }
 
-      private static void ghwitalice(){
+      private static void ghwitalice(){//gotogreenhouse with alice to get a car
           
       }
-       static private void walktotownwitalice(){
+       static private void walktotownwitalice(){//you and alice walk to town
       System.out.println("Karen and alice decide cars are too loud and start to walk to town.");  
     }
         }
